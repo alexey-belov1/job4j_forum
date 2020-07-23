@@ -1,14 +1,28 @@
 package ru.job4j.forum.model;
 
+import javax.persistence.*;
 import java.util.*;
 
+@Entity
+@Table(name = "post")
 public class Post {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String name;
+
+    @Column(name = "description")
     private String desc;
+
+    @OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE})
+    @JoinColumn(name = "user_id", nullable = false, updatable = false)
     private User author;
+
     private Calendar created;
+
+    @OneToMany(mappedBy = "post", fetch = FetchType.EAGER)
     private List<Message> messages = new ArrayList<>();
 
     public int getId() {

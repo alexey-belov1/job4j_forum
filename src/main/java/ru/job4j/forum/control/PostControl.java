@@ -38,8 +38,8 @@ public class PostControl {
         User user = (User) request.getSession().getAttribute("user");
         message.setAuthor(user);
         message.setCreated(GregorianCalendar.getInstance());
+        message.setPost(posts.findById(postId));
         messages.save(message);
-        posts.findById(postId).addMessage(message);
         return "redirect:/post?postId=" + postId;
     }
 }
