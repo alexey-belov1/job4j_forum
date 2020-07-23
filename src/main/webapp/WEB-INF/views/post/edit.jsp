@@ -47,7 +47,7 @@
                             <label for="desc">Описание:</label>
                             <textarea class="form-control" name="desc" id="desc" rows="3" title="описание">${post.desc}</textarea>
                         </div>
-                        <input type="submit" class="btn btn-primary" value="submit" onclick="return validate();"/>
+                        <input type="submit" class="btn btn-primary" value="Отправить" onclick="return validate();"/>
                         <p id="msg"></p>
                     </form>
                 </div>

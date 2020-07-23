@@ -96,7 +96,7 @@
                             <textarea class="form-control" name="text" id="text" rows="3"></textarea>
                         </div>
                         <input type="hidden" name="postId" value="${post.id}" />
-                        <input type="submit" class="btn btn-primary" value="submit" onclick="return validate();"/>
+                        <input type="submit" class="btn btn-primary" value="Добавить сообщение" onclick="return validate();"/>
                         <p id="msg"></p>
                     </form>
                 </div>

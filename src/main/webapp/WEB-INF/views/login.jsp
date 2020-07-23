@@ -42,7 +42,7 @@
                         <label for="password">Пароль:</label>
                         <input type="password" class="form-control" name="password" id="password" title="пароль">
                     </div>
-                    <input type="submit" class="btn btn-primary" value="submit" onclick="return validate();" />
+                    <input type="submit" class="btn btn-primary" value="Войти" onclick="return validate();" />
                     <p id="msg">${errorMessage}</p>
                 </form>
             </div>
