@@ -6,6 +6,9 @@ jdk:
 services:
   - postgresql
 
+before_install:
+  - psql -c 'create database forum_test;' -U postgres
+
 # используем режим обычного пользователя для сборки проекта.
 sudo: false
 
@@ -21,3 +24,7 @@ notifications:
       -veshousis1@gmail.com
     on_success: never # default: change
     on_failure: always # default: always
+
+env:
+  global:
+    - CODECOV_TOKEN="9dec1f6c-b6b3-4f01-94ec-17271201a6b7"
